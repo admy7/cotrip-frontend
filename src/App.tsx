@@ -1,7 +1,7 @@
-import "./App.css";
-
-function App() {
-  return <h1>Welcome to CoTrip ✈️</h1>;
+export default function App() {
+  return (
+    <h1 className="mt-10 flex items-center justify-center text-2xl">
+      Welcome to CoTrip ✈️
+    </h1>
+  );
 }
-
-export default App;
