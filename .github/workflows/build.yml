@@ -40,5 +40,5 @@ jobs:
           push: true
           platforms: linux/amd64
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/cotrip:cotrip-frontend-${{ steps.version.outputs.VERSION }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/cotrip:cotrip-frontend-latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/cotrip-frontend:${{ steps.version.outputs.VERSION }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/cotrip-frontend:latest
