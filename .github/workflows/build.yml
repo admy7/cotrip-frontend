@@ -42,6 +42,8 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/cotrip-frontend:${{ steps.version.outputs.VERSION }}
             ${{ secrets.DOCKERHUB_USERNAME }}/cotrip-frontend:latest
+          build-args: |
+            VITE_BACKEND_URL=http://cotrip-backend:8081
 
       - name: Trigger Deployment
         run: |
