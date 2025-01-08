@@ -2,6 +2,7 @@ import { BACKEND_URL } from "./config";
 import { CreateTripDTO } from "./types";
 
 export const createTrip = async (trip: CreateTripDTO) => {
+  console.log(BACKEND_URL);
   const response = await fetch(`${BACKEND_URL}/api/v1/trips`, {
     method: "POST",
     headers: {
