@@ -107,7 +107,7 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/cotrip-frontend:${{ steps.version.outputs.VERSION }}
             ${{ secrets.DOCKERHUB_USERNAME }}/cotrip-frontend:latest
           build-args: |
-            VITE_BACKEND_URL=http://cotrip-backend:8081
+            VITE_BACKEND_URL=http://${{ secrets.EC2_IP_ADDRESS }}:8080
 
       - name: Trigger Deployment
         run: |
